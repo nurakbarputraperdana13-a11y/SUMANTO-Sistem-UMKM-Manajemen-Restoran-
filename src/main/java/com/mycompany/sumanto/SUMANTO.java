@@ -11,12 +11,23 @@ package com.mycompany.sumanto;
 public class SUMANTO {
 
     public static void main(String[] args) {
-        Makanan makanan1 = new Makanan(1 , "Mie Pedes lv 1", 45000);
-        Makanan makanan2 = new Makanan(2 , "Mie Pedes lv 2", 50000);
         
-        Makanan.list(); 
-        makanan1.displayListMakanan();
-        makanan2.displayListMakanan();
+        String status;
+        
+        Makanan[] daftarMakanan = {
+            new Makanan("01", "Mie", 45000, true, 13),
+            new Makanan("02", "Shushi", 50000, false, 0),
+            new Makanan("03"," Ayam Bakar", 30000, true, 10)
+        };
+        
+        TampilanTableMakanan.tampilkan(daftarMakanan);
+        System.out.println("");
+        
+        for (Makanan makanan : daftarMakanan){
+            status = (makanan.tersedia == true) ? "ya" : "tidak";
+            makanan.displayListMakanan(status);
+        }
+        
         
     }
 }
