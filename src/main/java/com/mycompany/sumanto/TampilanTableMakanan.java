@@ -11,14 +11,14 @@ package com.mycompany.sumanto;
 public class TampilanTableMakanan {
     static void tampilkan(Makanan[] makanan){
            
-        System.out.println("+----+------------+----------+----------+------+");
+        System.out.println("|----|------------|----------+----------|------|");
         System.out.println("| ID | Nama       | Harga    | Tersedia | Stok |");
-        System.out.println("+----+------------+----------+----------+------+");
+        System.out.println("|----|------------|----------|----------|------|");
         
         for (Makanan mkn : makanan){
             System.out.printf(
                     "| %-2s | %-10s | %-8.1f | %-8s | %-4d |%n",
-                    mkn.id, mkn.nama, mkn.harga, mkn.tersedia, mkn.stock);
+                    mkn.getId(), mkn.getNama(), mkn.getHarga(), mkn.getTersedia(), mkn.getStock());
         }
         System.out.println("+----+------------+----------+----------+------+");
     }
