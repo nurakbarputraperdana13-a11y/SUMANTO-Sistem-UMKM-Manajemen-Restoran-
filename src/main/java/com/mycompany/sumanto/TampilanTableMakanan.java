@@ -20,6 +20,6 @@ public class TampilanTableMakanan {
                     "| %-2s | %-10s | %-8.1f | %-8s | %-4d |%n",
                     mkn.getId(), mkn.getNama(), mkn.getHarga(), mkn.getTersedia(), mkn.getStock());
         }
-        System.out.println("+----+------------+----------+----------+------+");
+        System.out.println("|----+|------------|----------|----------|------|");
     }
 }
