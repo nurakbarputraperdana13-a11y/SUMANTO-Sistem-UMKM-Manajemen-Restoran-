@@ -20,6 +20,8 @@ public class SUMANTO {
             new Makanan("03"," Ayam Bakar", 30000, true, 10)
         };
         
+        Makanan mknUtama = new MakananUtama("04"," Ayam Geprek", 30000, true, 10, "Daging ayam", 5);
+                
         //ubah data pake set
         daftarMakanan[0].setId("001");
         daftarMakanan[0].setNama("Mie Pedas");
@@ -36,6 +38,7 @@ public class SUMANTO {
             makanan.displayListMakanan(status);
         }
         
-        
+        status = (mknUtama.getTersedia() == true) ? "ya" : "tidak";
+        mknUtama.displayListMakanan(status);
     }
 }

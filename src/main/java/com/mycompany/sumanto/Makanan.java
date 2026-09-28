@@ -72,6 +72,7 @@ public class Makanan {
         System.out.println("Nama: " + getNama());  
         System.out.println("Harga: " + getHarga());  
         System.out.println("Tersedia: " + status);  
-        System.out.println("Stock: " + getStock() +"\n");  
+        System.out.println("Stock: " + getStock());  
+        System.out.println("");
     }
 }
