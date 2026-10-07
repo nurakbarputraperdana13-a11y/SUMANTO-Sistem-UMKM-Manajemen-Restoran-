@@ -21,6 +21,7 @@ public class SUMANTO {
         };
         
         Makanan mknUtama = new MakananUtama("04"," Ayam Geprek", 30000, true, 10, "Daging ayam", 5);
+        Makanan mknUtama2 = new MakananUtama("05"," asoy", 70000, false, 2, "Manusia", 10);
                 
         //ubah data pake set
         daftarMakanan[0].setId("001");
@@ -40,5 +41,9 @@ public class SUMANTO {
         
         status = (mknUtama.getTersedia() == true) ? "ya" : "tidak";
         mknUtama.displayListMakanan(status);
+        
+        mknUtama2.apakahStockTersedia();
+        System.out.println(mknUtama2.prosesMasak());
+        
     }
 }

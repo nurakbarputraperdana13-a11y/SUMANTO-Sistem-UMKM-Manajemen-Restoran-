@@ -7,12 +7,10 @@ package com.mycompany.sumanto;
  *
  * @author LENOVO
  */
-public class Makanan {
+public class Makanan extends StockMakanan implements ProsesMasak{
     private String id;
     private String nama;
     private double harga;
-    private boolean tersedia;
-    private int stock;
     
     Makanan (String id, String nama, double harga, boolean tersedia, int stock){
         setId(id);
@@ -51,21 +49,6 @@ public class Makanan {
         }
     }
     
-    public boolean getTersedia(){
-        return tersedia;
-    }
-    
-    public void setTersedia(boolean tersedia){
-        this.tersedia = tersedia;
-    }
-    
-    public int getStock(){
-        return stock;
-    }
-    
-    public void setStock(int stock){
-        this.stock = stock;
-    }
             
     public void displayListMakanan(String status){
         System.out.println("ID: " + getId());  
@@ -75,4 +58,24 @@ public class Makanan {
         System.out.println("Stock: " + getStock());  
         System.out.println("");
     }
+
+    @Override
+    public void apakahStockTersedia() {
+        if(getTersedia() == false || getStock() == 0){
+            System.out.println("Stock: Tersedia");
+        }
+        else{
+            System.out.println("Stock: Habis");
+        }
+    }
+
+    @Override
+    public String prosesMasak() {
+        String pesan = null;
+        if(masak > 5){
+            pesan = "Gosong\n";
+        }
+        return pesan;
+    }
+    
 }
