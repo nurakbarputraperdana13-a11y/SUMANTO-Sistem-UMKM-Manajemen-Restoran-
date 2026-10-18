@@ -11,6 +11,6 @@ package com.mycompany.sumanto;
 public interface ProsesMasak {
     int masak = 6;
     
-    public String prosesMasak();
+    public String prosesMasak()throws NilaiTidakValidException;
 }
 

@@ -70,12 +70,15 @@ public class Makanan extends StockMakanan implements ProsesMasak{
     }
 
     @Override
-    public String prosesMasak() {
+    public String prosesMasak()throws NilaiTidakValidException{
         String pesan = null;
         if(masak > 5){
             pesan = "Gosong\n";
         }
+        if(masak < 0){
+            throw new NilaiTidakValidException("Error Nih");
+        }
         return pesan;
     }
-    
+
 }
